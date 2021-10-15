@@ -1,6 +1,14 @@
 import Image from "next/image";
+import ListOfTopMenu from "@/components/header/headerBody/menu/ListOfTopMenu";
 
 export default function HeaderTop() {
+    const topMenu = [
+        {title: 'Search', image: 'fa_search.svg'},
+        {title: 'Subscribe', image: 'Vector.svg'},
+        {title: 'email', image: 'Vector.svg'},
+        {title: 'menu', image: 'bars.svg'},
+    ]
+
     return (
         <>
             <div className='w-[169px] h-full relative '>
@@ -8,30 +16,9 @@ export default function HeaderTop() {
             </div>
             <nav>
                 <ul className='flex'>
-                    <li>
-                        <div className='w-[110px]  h-[56px] flex justify-center items-center'>
-                            <Image src='/fa_search.svg' width={16} height={16} alt='search'/>
-                            <p className='ml-[12px] font-Roboto text-xs'>Search</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className='w-[110px] h-[56px] flex justify-center items-center'>
-                            <Image src='/Vector.svg' width={16} height={16} alt='vector'/>
-                            <p className='ml-[12px] font-Roboto text-xs'>Subscribe</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className='w-[110px]  h-[56px] flex justify-center items-center'>
-                            <Image src='/email.svg' width={16} height={16} alt='email'/>
-                            <p className='ml-[12px] font-Roboto text-xs'>Contact us</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div className='w-[110px]  h-[56px] flex justify-center bg-bar items-center'>
-                            <Image src='/bars.svg' width={16} height={16} alt='email'/>
-                            <p className='ml-[12px] font-Roboto text-xs'>Contact us</p>
-                        </div>
-                    </li>
+                    {topMenu.map((item, i) => (
+                        <ListOfTopMenu item={item} key={i}/>
+                    ))}
                 </ul>
             </nav>
         </>
