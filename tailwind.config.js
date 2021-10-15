@@ -7,6 +7,7 @@ module.exports = {
       ...theme('colors'),
       'bar': '#3F98A0',
       'menu': '#1E2736',
+      'footer': '#212C3E',
       'menu-active': '#797D86',
 
     }),
