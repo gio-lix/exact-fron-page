@@ -9,6 +9,8 @@ module.exports = {
       'menu': '#1E2736',
       'footer': '#212C3E',
       'menu-active': '#797D86',
+      'list': '#F0F0F0',
+      'bgList': '#F5F5F5',
 
     }),
 

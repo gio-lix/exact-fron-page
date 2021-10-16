@@ -4,16 +4,16 @@ import Footer from "@/components/footer/Footer";
 
 export default function Layout({ children}) {
     return (
-        <>
+        <div    className='items-center'>
             <Head>
                 <title>ExactPro</title>
                 <meta name='description' content='exactPro for testing'/>
             </Head>
             <Header />
-            <div className='sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:lg:px-[320px] '>
+            <div className='max-w-[1920px] '>
                 {children}
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
