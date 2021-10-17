@@ -21,6 +21,7 @@ module.exports = {
     backgroundColor: theme => ({
       ...theme('colors'),
       'bar': '#3F98A0',
+      'barHover': '#4ab2bb',
       'menu': '#1E2736',
       'footer': '#212C3E',
       'menu-active': '#797D86',
@@ -31,9 +32,10 @@ module.exports = {
       'burger': '#1e2736',
       'burgerHover': '#5e6577',
 
+
     }),
     scale: {
-      '102': '1.2'
+      '102': '1.1'
     },
 
     extend: {
