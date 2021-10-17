@@ -21,7 +21,6 @@ export default function HomePageNav() {
                         <Image src='/star.svg' width={11} height={24} alt='image'/>
                     </div>
                 </div>
-
                 <div className='px-4  h-[64px]  flex justify-center items-center justify-between'>
                     <p className=' font-Open_Sans  text-sm opacity-50'>About Us</p>
                 </div>

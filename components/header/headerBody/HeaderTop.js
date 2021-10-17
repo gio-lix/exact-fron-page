@@ -11,7 +11,7 @@ export default function HeaderTop() {
 
     return (
         <>
-            <div className='w-[169px] h-full relative '>
+            <div className='w-[169px] h-full relative hidden sm:inline-flex'>
                 <Image src='/Exactpro.png' layout='fill' className='absolute' alt='Exactpro' />
             </div>
             <nav>

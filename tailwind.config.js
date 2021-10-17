@@ -11,6 +11,7 @@ module.exports = {
       'menu-active': '#797D86',
       'list': '#F0F0F0',
       'bgList': '#F5F5F5',
+      'logo': '#C4C4C4',
 
     }),
 
@@ -24,5 +25,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

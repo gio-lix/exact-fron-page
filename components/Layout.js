@@ -4,7 +4,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function Layout({ children}) {
     return (
-        <div    className='items-center'>
+        <div className=''>
             <Head>
                 <title>ExactPro</title>
                 <meta name='description' content='exactPro for testing'/>

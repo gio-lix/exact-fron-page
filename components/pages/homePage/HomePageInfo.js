@@ -3,11 +3,14 @@ import Image from "next/image";
 export default function HomePageInfo() {
     return (
         <>
-            <div className='w-full grid sm:grid-cols-5 sm:gap-x-6 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px]'>
+            <div className='w-full grid sm:grid-cols-5 sm:gap-x-6 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px] group'>
                 <div
-                    className='border  min-h-[158px] md:h-[240px] xl:h-[308px] sm:col-start-1 sm:col-end-3 p-2 lg:p-4 xl:p-6'>
+                    className='  min-h-[158px] md:h-[240px] xl:h-[308px] sm:col-start-1 sm:col-end-3 p-2 lg:p-4 xl:p-6'>
                     <div>
-                        <p className='font-bold '>Our Mission</p>
+                        <div className='overflow-hidden'>
+                            <p className='font-bold '>Our Mission</p>
+                            <div className='w-20 h-1 mt-1  transform  -translate-x-10 group-hover:translate-x-0 transition duration-300  ease-in-out bg-green-400'> </div>
+                        </div>
                         <div className=''>
                             <p className='text-xs mt-5 md:mt-10'>
                                 Exactpro specializes in quality assurance services and related software development with
@@ -21,7 +24,7 @@ export default function HomePageInfo() {
                         </div>
                     </div>
                 </div>
-                <div className='relative border bg-red-400 h-[340px] sm:h-[240px] md:h-[300px] lg:h-[380px] xl:h-[480px] sm:col-start-3 sm:col-end-6'>
+                <div className='relative border h-[340px] sm:h-[240px] md:h-[300px] lg:h-[380px] xl:h-[480px] sm:col-start-3 sm:col-end-6'>
                     <Image src='/mission.png' layout='fill'  className='absolute' alt='image' />
                 </div>
             </div>
