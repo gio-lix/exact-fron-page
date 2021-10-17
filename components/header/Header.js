@@ -1,7 +1,6 @@
-import Image from "next/image";
+
 import HeaderTop from "@/components/header/headerBody/HeaderTop";
 import HeaderMiddle from "@/components/header/headerBody/HeaderMiddle";
-import ListOfMenu from "@/components/header/headerBody/menu/ListOfMenu";
 import HeaderBottom from "@/components/header/headerBody/HeaderBottom";
 
 export default function Header() {

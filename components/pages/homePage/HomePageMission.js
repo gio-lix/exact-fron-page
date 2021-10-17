@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HomePageMission() {
     return (
         <>
-            <div className='w-full bg-bgList mt-7 sm:mt-10 lg:mt-20 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px] group '>
+            <div className='w-full bg-list mt-7 sm:mt-10 lg:mt-20 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px] group '>
                 <div className='w-full flex flex-cols justify-center  '>
                     <div className=' w-[192px]  overflow-hidden '>
                         <p className=' text-3xl'>Our Mission</p>
@@ -29,7 +29,7 @@ export default function HomePageMission() {
                             <Image src='/Group-(13).svg' layout='fill' className='absolute z-50 '  alt='img'/>
                             <div  className='relative w-20 h-20   transition transform translate-y-16 translate-x-20'>
                                 <Image src='/Vector-(6).svg' width={50} height={50}
-                                       className='absolute transition transform -translate-x-3.5 translate-y-0 group-hover:-translate-x-2 duration-300 '
+                                       className='absolute transition transform -translate-x-3.5 translate-y-0 group-hover:-translate-x-2 duration-300 delay-100 '
                                        alt='img'
                                 />
                             </div>
@@ -44,7 +44,7 @@ export default function HomePageMission() {
                             <Image src='/Group 14.svg' layout='fill' className='absolute z-50 '  alt='img'/>
                             <div  className='relative w-20 h-20   transition transform translate-y-16 translate-x-20'>
                                 <Image src='/Vector-(7).svg' width={50} height={50}
-                                       className='absolute transition transform -translate-x-3.5 translate-y-0 group-hover:-translate-x-2 duration-300 '
+                                       className='absolute transition transform -translate-x-3.5 translate-y-0 group-hover:-translate-x-2 duration-300 delay-150 '
                                        alt='img'
                                 />
                             </div>
@@ -59,7 +59,7 @@ export default function HomePageMission() {
                             <Image src='/Group-15.svg' layout='fill' className='absolute z-50'  alt='img'/>
                             <div  className='relative w-20 h-20   transition transform translate-y-9 -translate-x-2'>
                                 <Image src='/Vector-(8).svg' width={50} height={50}
-                                       className='absolute transition transform -translate-x-3 translate-y-0 group-hover:-translate-x-4 duration-300 '
+                                       className='absolute transition transform -translate-x-3 translate-y-0 group-hover:-translate-x-4 duration-300 delay-200 '
                                        alt='img'
                                 />
                             </div>

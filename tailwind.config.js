@@ -12,8 +12,12 @@ module.exports = {
       'list': '#F0F0F0',
       'bgList': '#F5F5F5',
       'logo': '#C4C4C4',
+      'menuList': '#797D86',
 
     }),
+    scale: {
+      '102': '1.2'
+    },
 
     extend: {
       fontFamily: {
