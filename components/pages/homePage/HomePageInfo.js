@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HomePageInfo() {
     return (
         <>
-            <div className='w-full grid sm:grid-cols-5 sm:gap-x-6 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px] group'>
+            <div className='w-full grid sm:grid-cols-5 sm:gap-x-6 sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px] group'>
                 <div
                     className='  min-h-[158px] md:h-[240px] xl:h-[308px] sm:col-start-1 sm:col-end-3 p-2 lg:p-4 xl:p-6'>
                     <div>

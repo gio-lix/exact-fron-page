@@ -6,7 +6,7 @@ export default function HomePageOurExperience() {
             <div className='max-w-[1920px] min-h-[230px] md:h-[268px] lg:h-[329px] xl:h-[429px] relative'>
                 <Image src='/size_p_5_0.png' layout='fill' className='absolute' alt='image'/>
                 <div
-                    className='absolute w-full h-full absolute px-3 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px]'>
+                    className='absolute w-full h-full absolute px-3 sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px]'>
                     <div className='w-80 sm:w-[336px] xl:w-[536px] h-full mt-1 sm:mt-2 xl:mt-[44px]'>
                         <div>
                             <p className='text-2xl font-Open_Sans text-white'>Our Experience</p>

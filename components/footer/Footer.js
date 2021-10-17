@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <>
             <div
-                className='max-w-[1920px] min-h-[444px] bg-footer grid  lg:grid-cols-3 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px]'>
+                className='max-w-[1920px] min-h-[444px] bg-footer grid  lg:grid-cols-3 sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px]'>
                 <div className='pt-4 lg:pt-10 flex justify-center'>
                     <div>
                         <Image src='/logo_white.svg' width={250} height={90} alt='logo'/>

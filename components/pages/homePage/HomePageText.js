@@ -1,7 +1,7 @@
 export default function HomePageText() {
     return (
         <>
-            <div className='max-w-[1920px] min-h-[230px] mt-5 sm:mt-7 xl:mt-11 px-3 sm:px-[50px] md:px-[100px] lg:px-[200px] 2xl:px-[320px]'>
+            <div className='max-w-[1920px] min-h-[230px] mt-5 sm:mt-7 xl:mt-11 px-3 sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px]'>
                 <p className='font-Open_Sans'>The Deliberate Practice of Software Testing</p>
                 <div className='mb-5 sm:mb-10 xl:mb-20'>
                     <p className='text-xs mt-4 sm:mt-6 xl:mt-10'>
