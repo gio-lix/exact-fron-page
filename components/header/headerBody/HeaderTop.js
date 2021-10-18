@@ -41,39 +41,33 @@ export default function HeaderTop() {
             setEmail(false)
         }
     }
-
     return (
         <>
             <div className='w-[100px] h-[40px] sm:w-[169px] h-full relative '>
-                <Image src='/Exactpro.png' layout='fill' className='absolute' alt='Exactpro' />
+                <Image src='/Exactpro.png' layout='fill' className='absolute' alt='Exactpro'/>
             </div>
             <nav>
                 <ul className='flex'>
-                    <span  className='inline-flex'>
-                        {topMenu.map((item, i) => (
-                            <div key={i} ref={menuRef}>
-                                <ListOfTopMenu item={item}
-                                               search={search}
-                                               setSearch={setSearch}
-                                               setSubscribe={setSubscribe}
-                                               subscribe={subscribe}
-                                               setEmail={setEmail}
-                                               email={email}
-                                />
-                            </div>
-                        ))}
-                        {/*overlay for menu pop up*/}
-                        <div className={`${(search || subscribe || email) && 'fixed left-0  z-75 top-0 bg-black opacity-50 w-full h-full'}`}> </div>
-                    </span>
+                    {topMenu.map((item) => (
+                        <div key={item.id} ref={menuRef}>
+                            <ListOfTopMenu item={item}
+                                           search={search}
+                                           setSearch={setSearch}
+                                           setSubscribe={setSubscribe}
+                                           subscribe={subscribe}
+                                           setEmail={setEmail}
+                                           email={email}
+                            />
+                        </div>
+                    ))}
+                    {/*overlay for menu pop up*/}
+                    <div className={`${(search || subscribe || email) && 'fixed left-0  z-75 top-0 bg-black opacity-50 w-full h-full'}`}></div>
 
                     {/*burger menu*/}
-                    <span >
-                        <div ref={bodyRef}>
-                            <BurgerMenu setBurger={setBurger} burger={burger} />
-                        </div>
-                        <div className={`${burger && 'fixed left-0 top-0 z-75 bg-black opacity-50 w-full h-full'}`}> </div>
-                    </span>
-
+                    <div ref={bodyRef}>
+                        <BurgerMenu setBurger={setBurger} burger={burger}/>
+                    </div>
+                    <div className={`${burger && 'fixed left-0 top-0 z-75 bg-black opacity-50 w-full h-full'}`}></div>
                 </ul>
             </nav>
         </>

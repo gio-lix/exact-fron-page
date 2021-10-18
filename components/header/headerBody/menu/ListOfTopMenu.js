@@ -52,7 +52,6 @@ export default function ListOfTopMenu({item, search, setSearch, setSubscribe, su
                     </div>
                 </div>
             )}
-
             <SubscribePopUp  setSubscribe={setSubscribe} subscribe={subscribe}/>
             <ContactPopUp setEmail={setEmail} email={email}/>
         </>

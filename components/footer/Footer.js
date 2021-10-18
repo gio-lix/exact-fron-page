@@ -15,10 +15,10 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className=' flex justify-center pt-4 lg:pt-10 '>
+                <div className=' flex justify-center  pt-7 lg:pt-10 '>
                     <FooterAboutUs/>
                 </div>
-                <div className='pt-4 lg:pt-10 flex justify-center '>
+                <div className='pt-7 lg:pt-10 flex justify-center  '>
                     <LogoList/>
                 </div>
                 <div className='lg:col-start-1 lg:col-end-4   border-t border-opacity-30 pt-6 '>

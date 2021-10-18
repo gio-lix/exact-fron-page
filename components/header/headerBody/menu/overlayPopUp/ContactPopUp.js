@@ -41,7 +41,6 @@ export default function ContactPopUp({setEmail, email}) {
                                 <div className=' w-full h-16 flex flex-col justify-end'>
                                     <p className='text-xs opacity-50 font-Open_Sans'>Message</p>
                                     <textarea className='w-full h-20 border-b resize-none outline-none'> </textarea>
-                                    {/*<input type="text" className='border-b outline-none w-full'/>*/}
                                 </div>
                             </div>
                             <div className='mt-4 h-16 flex flex-col justify-end'>

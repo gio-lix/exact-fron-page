@@ -44,7 +44,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'Roboto': ['Roboto'],
-        'Open_Sans': ['Open Sans'],
+        'Open_Sans': ['Open Sans', 'sans-serif'],
       }
     },
   },
