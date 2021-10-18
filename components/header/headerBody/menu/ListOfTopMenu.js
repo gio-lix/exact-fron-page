@@ -1,20 +1,23 @@
 import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
+import {useRouter} from "next/router";
+import ContactPopUp from "@/components/header/headerBody/menu/overlayPopUp/ContactPopUp";
+import SubscribePopUp from "@/components/header/headerBody/menu/overlayPopUp/SubscribePopUp";
 
-export default function ListOfTopMenu({item, search, setSearch, setSubscribe, subscribe}) {
-
-    const [input, setInput] = useState(7)
+export default function ListOfTopMenu({item, search, setSearch, setSubscribe, subscribe, email, setEmail}) {
+    const router = useRouter()
 
     const handleClick = () => {
         if (item.title === 'Search') setSearch(!search)
         if (item.title === 'Subscribe') setSubscribe(!subscribe)
+        if (item.title === 'Contact Us') setEmail(!email)
     }
     useEffect(() => {
         window.addEventListener('scroll', nonScroll)
         return () => window.removeEventListener('scroll', nonScroll)
-    }, [search, subscribe])
+    }, [search, subscribe, email])
     const nonScroll = () => {
-        if (search === true || subscribe === true) window.scrollTo(0, 0)
+        if (search === true || email === true || subscribe === true) window.scrollTo(0, 0)
     }
 
 
@@ -36,8 +39,8 @@ export default function ListOfTopMenu({item, search, setSearch, setSubscribe, su
                                 <input type="text" className='w-full h-full pl-1 outline-none'/>
                             </div>
                             <div
-                                className='w-[130px] h-[34px] flex items-center justify-center bg-bar transition -translate-y-0.5 -translate-x-2'>
-                                <div className='flex items-center'>
+                                className='w-[130px] h-[34px]   flex items-center justify-center bg-bar  cursor-pointer hover:bg-barHover transition -translate-y-0.5 -translate-x-2'>
+                                <div className='flex items-center '>
                                     <Image src='/fa_search-white.svg' width={16} height={16} alt='logo'/>
                                     <p className='text-white ml-2 font-Open_Sans'>Search</p>
                                 </div>
@@ -50,44 +53,9 @@ export default function ListOfTopMenu({item, search, setSearch, setSubscribe, su
                 </div>
             )}
 
-            {subscribe && (
-                <div className='fixed z-100 left-0 w-full  bg-red-500  flex justify-center  items-center'>
-                    <div className='w-11/12 sm:w-3/4 md:w-2/4 fixed bg-white top-20 h-[423px] flex flex-col'>
-                        <div className='h-[70px] w-full bg-subscribe flex items-center justify-between px-5'>
-                            <p className='text-2xl font-bold text-white'>Subscribe</p>
-                            <button className='ml-10 hidden md:inline-flex ' onClick={() => setSubscribe(false)}>
-                                <Image src='/x_icon.svg' width={17} height={17} alt='logo'/>
-                            </button>
-                        </div>
-                        <div className='p-5 h-[273px]'>
-                            <div className=' w-full h-52  p-5'>
-                                <div className=' w-full h-[55px] mb-[20px] '>
-                                    <p className='w-full h-[26px] opacity-50'>Your email address</p>
-                                    <input type="text" className='w-full h-[30px] border-b focus:outline-none'/>
-                                </div>
-                                {/*<div className='mb-8'>*/}
-                                {/*    <p className=' font-sans text-gray-600'>*/}
-                                {/*        By pressing the Subscribe button, you indicate that you wish to subscribe to Exactpro*/}
-                                {/*    </p>*/}
-                                {/*    <p  className=' font-sans  text-gray-600'>*/}
-                                {/*        marketing communications and that you agree with Exactpro Privacy policy*/}
-                                {/*    </p>*/}
-                                {/*</div>*/}
-                                <div className='mb-8'>
-                                    <p className='font-sans  text-gray-600'>Follow Exactpro on LinkedIn</p>
-                                </div>
-                                <div className='w-full flex justify-center'>
-                                    <button className='w-[122px] h-[34px] border-2 border-subscribeHover  flex justify-center items-center group hover:bg-subscribeHover'>
-                                        <p className='group-hover:text-white'>Subscribe</p>
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            )}
+            <SubscribePopUp  setSubscribe={setSubscribe} subscribe={subscribe}/>
+            <ContactPopUp setEmail={setEmail} email={email}/>
         </>
     )
+
 }

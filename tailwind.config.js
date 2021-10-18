@@ -33,6 +33,9 @@ module.exports = {
       'burgerHover': '#5e6577',
       'subscribe': '#4b525e',
       'subscribeHover': '#223244',
+      'subscribeGit': '#464f59',
+      'subscribeFace': '#777',
+      'subscribeTwitter': '#b9b9b9',
     }),
     scale: {
       '102': '1.1'

@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <>
-            <div className='max-w-[1920px] h-[56px]  whitespace-nowrap overflow-x-scroll scrollbar-hide h-[56px]  flex items-center justify-between sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px] '>
+            <div className='max-w-[1920px] h-[56px]   overflow-x-scroll scrollbar-hide h-[56px]  flex items-center justify-between sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px] '>
                 <HeaderTop />
             </div>
             <div className='max-w-[1920px] h-[260px] relative bg-indigo-200 sm:px-[20px] md:px-[40px] lg:px-[100px] 2xl:lg:px-[320px]'>

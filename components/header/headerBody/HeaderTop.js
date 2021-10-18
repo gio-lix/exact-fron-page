@@ -14,6 +14,7 @@ export default function HeaderTop() {
     const [burger, setBurger] = useState(false)
     const [search, setSearch] = useState(false)
     const [subscribe, setSubscribe] = useState(false)
+    const [email, setEmail] = useState(false)
 
     const menuRef = useRef()
     const bodyRef = useRef()
@@ -37,12 +38,13 @@ export default function HeaderTop() {
         if (!e.path.includes(menuRef.current)) {
             setSearch(false)
             setSubscribe(false)
+            setEmail(false)
         }
     }
 
     return (
         <>
-            <div className='w-[169px] h-full relative '>
+            <div className='w-[100px] h-[40px] sm:w-[169px] h-full relative '>
                 <Image src='/Exactpro.png' layout='fill' className='absolute' alt='Exactpro' />
             </div>
             <nav>
@@ -55,11 +57,13 @@ export default function HeaderTop() {
                                                setSearch={setSearch}
                                                setSubscribe={setSubscribe}
                                                subscribe={subscribe}
+                                               setEmail={setEmail}
+                                               email={email}
                                 />
                             </div>
                         ))}
-
-                        <div className={`${(search || subscribe) && 'fixed left-0  z-75 top-0 bg-black opacity-50 w-full h-full'}`}> </div>
+                        {/*overlay for menu*/}
+                        <div className={`${(search || subscribe || email) && 'fixed left-0  z-75 top-0 bg-black opacity-50 w-full h-full'}`}> </div>
                     </span>
 
 
