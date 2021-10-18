@@ -3,24 +3,36 @@ import ListOfTopMenu from "@/components/header/headerBody/menu/ListOfTopMenu";
 import BurgerMenu from "@/components/header/headerBody/menuburger/BurgerMenu";
 import {useEffect, useRef, useState} from "react";
 
+
+const topMenu = [
+    {id: 0, title: 'Search', image: 'fa_search.svg'},
+    {id: 1, title: 'Subscribe', image: 'Vector.svg'},
+    {id: 2, title: 'Contact Us', image: 'email.svg'},
+]
+
 export default function HeaderTop() {
     const [burger, setBurger] = useState(false)
+    const [search, setSearch] = useState(false)
+    const searchRef = useRef()
     const bodyRef = useRef()
-    const topMenu = [
-        {title: 'Search', image: 'fa_search.svg'},
-        {title: 'Subscribe', image: 'Vector.svg'},
-        {title: 'Contact Us', image: 'email.svg'},
 
-    ]
-    const handleClick = () => {
-        setBurger(!burger)
-    }
+
+    //burger ref
     useEffect(() => {
         document.body.addEventListener('click', handleShowLogin)
         return () => document.body.removeEventListener('click', handleShowLogin)
     }, [burger])
     const handleShowLogin = (e) => {
         if (!e.path.includes(bodyRef.current)) setBurger(false)
+    }
+
+    //search ref
+    useEffect(() => {
+        document.body.addEventListener('click', handleShowSearch)
+        return () => document.body.removeEventListener('click', handleShowSearch)
+    }, [search])
+    const handleShowSearch = (e) => {
+        if (!e.path.includes(searchRef.current)) setSearch(false)
     }
 
     return (
@@ -30,13 +42,25 @@ export default function HeaderTop() {
             </div>
             <nav>
                 <ul className='flex'>
-                    {topMenu.map((item, i) => (
-                        <ListOfTopMenu item={item} key={i}/>
-                    ))}
-                    <div ref={bodyRef}>
-                        <BurgerMenu setBurger={setBurger} burger={burger} handleClick={handleClick}/>
-                    </div>
-                    <div className={`${burger && 'fixed left-0 top-0 z-75 bg-black opacity-50 w-full h-full'}`}></div>
+                    <span  className='inline-flex'>
+                        {topMenu.map((item, i) => (
+                            <div key={i} ref={searchRef}>
+                                <ListOfTopMenu item={item} search={search} setSearch={setSearch} />
+                            </div>
+                        ))}
+                        <div className={`${search && 'fixed left-0 top-0 z-75 bg-black opacity-50 w-full h-full'}`}> </div>
+                    </span>
+
+
+
+                    {/*burger menu*/}
+                    <span >
+                        <div ref={bodyRef}>
+                            <BurgerMenu setBurger={setBurger} burger={burger} />
+                        </div>
+                        <div className={`${burger && 'fixed left-0 top-0 z-75 bg-black opacity-50 w-full h-full'}`}> </div>
+                    </span>
+
                 </ul>
             </nav>
         </>

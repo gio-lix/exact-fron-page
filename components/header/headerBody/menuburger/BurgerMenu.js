@@ -2,16 +2,16 @@ import Image from "next/image";
 import {useEffect} from "react";
 import BurgerCategory from "@/components/header/headerBody/menuburger/burgerCategory/BurgerCategory";
 
-export default function BurgerMenu({burger,setBurger,handleClick}) {
+export default function BurgerMenu({burger,setBurger}) {
+
+    const handleClick = () => setBurger(!burger)
 
     useEffect(() => {
         window.addEventListener('scroll', nonScroll)
         return () => window.removeEventListener('scroll', nonScroll)
     }, [burger])
     const nonScroll = () => {
-        if (burger === true) {
-            window.scrollTo(0, 0)
-        }
+        if (burger === true) window.scrollTo(0, 0)
     }
 
     return (
