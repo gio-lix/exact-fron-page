@@ -62,12 +62,9 @@ export default function HeaderTop() {
                                 />
                             </div>
                         ))}
-                        {/*overlay for menu*/}
+                        {/*overlay for menu pop up*/}
                         <div className={`${(search || subscribe || email) && 'fixed left-0  z-75 top-0 bg-black opacity-50 w-full h-full'}`}> </div>
                     </span>
-
-
-
 
                     {/*burger menu*/}
                     <span >

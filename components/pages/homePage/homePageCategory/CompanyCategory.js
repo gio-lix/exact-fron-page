@@ -26,8 +26,8 @@ export default function CompanyCategory({companyCategory, setCompanyCategory, se
                     <Image src='/star.svg' width={11} height={24} className={`${companyCategory && 'transform rotate-90 duration-200 ease-in-out'}`} alt='image'/>
                 </div>
                 {companyCategory && (
-                    <div className='absolute z-50 w-full sm:w-36 h-36 bg-white border shadow-2xl left-0  sm:left-80 top-12'>
-
+                    <div className='absolute z-50 w-full sm:w-36 h-36 bg-white border  border-gray-300 shadow-2xl left-0  sm:left-36 top-12'>
+                        <p className='text-center'>Company</p>
                     </div>
                 )}
             </div>
