@@ -13,7 +13,9 @@ const topMenu = [
 export default function HeaderTop() {
     const [burger, setBurger] = useState(false)
     const [search, setSearch] = useState(false)
-    const searchRef = useRef()
+    const [subscribe, setSubscribe] = useState(false)
+
+    const menuRef = useRef()
     const bodyRef = useRef()
 
 
@@ -30,9 +32,12 @@ export default function HeaderTop() {
     useEffect(() => {
         document.body.addEventListener('click', handleShowSearch)
         return () => document.body.removeEventListener('click', handleShowSearch)
-    }, [search])
+    }, [search, subscribe])
     const handleShowSearch = (e) => {
-        if (!e.path.includes(searchRef.current)) setSearch(false)
+        if (!e.path.includes(menuRef.current)) {
+            setSearch(false)
+            setSubscribe(false)
+        }
     }
 
     return (
@@ -44,12 +49,19 @@ export default function HeaderTop() {
                 <ul className='flex'>
                     <span  className='inline-flex'>
                         {topMenu.map((item, i) => (
-                            <div key={i} ref={searchRef}>
-                                <ListOfTopMenu item={item} search={search} setSearch={setSearch} />
+                            <div key={i} ref={menuRef}>
+                                <ListOfTopMenu item={item}
+                                               search={search}
+                                               setSearch={setSearch}
+                                               setSubscribe={setSubscribe}
+                                               subscribe={subscribe}
+                                />
                             </div>
                         ))}
-                        <div className={`${search && 'fixed left-0 top-0 z-75 bg-black opacity-50 w-full h-full'}`}> </div>
+
+                        <div className={`${(search || subscribe) && 'fixed left-0  z-75 top-0 bg-black opacity-50 w-full h-full'}`}> </div>
                     </span>
+
 
 
 

@@ -3,16 +3,6 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fill: theme => ({
-      'red': theme('colors.red.500'),
-      'green': theme('colors.green.500'),
-      'blue': theme('colors.blue.500'),
-    }),
-    stroke: theme => ({
-      'red': theme('colors.red.500'),
-      'green': theme('colors.green.500'),
-      'blue': theme('colors.blue.500'),
-    }),
     zIndex: {
       '0': 0,
       '10': 10,
@@ -41,8 +31,8 @@ module.exports = {
       'menuList': '#797D86',
       'burger': '#1e2736',
       'burgerHover': '#5e6577',
-
-
+      'subscribe': '#4b525e',
+      'subscribeHover': '#223244',
     }),
     scale: {
       '102': '1.1'
@@ -57,15 +47,12 @@ module.exports = {
   },
   variants: {
     extend: {
-      fill: ['hover', 'focus'],
-      stroke: ['hover', 'focus'],
     },
   },
   plugins: [
     require('tailwind-scrollbar-hide')
   ],
   corePlugins: {
-    fill: false,
-    stroke: false,
+
   }
 }
