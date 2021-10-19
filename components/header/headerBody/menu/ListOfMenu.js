@@ -11,6 +11,7 @@ export default function ListOfMenu({item}) {
                     <p className=' font-Open_Sans text-white text-sm'>{item.title}</p>
                 </div>
             </li>
+
         </>
     )
 }

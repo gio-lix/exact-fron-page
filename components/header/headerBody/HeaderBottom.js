@@ -13,11 +13,13 @@ export default function HeaderBottom() {
 
     return (
         <>
-            <ul className='flex'>
+            <ul className='flex '>
                 {menu.map((item) => (
                     <ListOfMenu item={item}   key={item.id}/>
                 ))}
+
             </ul>
+
         </>
     )
 }

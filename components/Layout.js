@@ -4,7 +4,7 @@ import Footer from "@/components/footer/Footer";
 
 export default function Layout({ children, title, keywords, description}) {
     return (
-        <div className=''>
+        <div>
             <Head>
                 <title>{title}</title>
                 <meta name='keywords' content={keywords}/>
