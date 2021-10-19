@@ -11,7 +11,7 @@ export default function SubscribePopUp({setSubscribe, subscribe}) {
                     <div className='w-full h-[60px] bg-subscribe flex items-center justify-center'>
                         <div className='h-[70px] w-full   flex items-center justify-between px-5'>
                             <p className='text-2xl font-bold text-white'>Subscribe</p>
-                            <button className='ml-10 hidden md:inline-flex ' onClick={() => setSubscribe(false)}>
+                            <button className='ml-10  ' onClick={() => setSubscribe(false)}>
                                 <Image src='/x_icon.svg' width={17} height={17} alt='logo'/>
                             </button>
                         </div>
