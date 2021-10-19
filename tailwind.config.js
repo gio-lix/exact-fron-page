@@ -40,7 +40,6 @@ module.exports = {
     scale: {
       '102': '1.1'
     },
-
     extend: {
       fontFamily: {
         'Roboto': ['Roboto'],
