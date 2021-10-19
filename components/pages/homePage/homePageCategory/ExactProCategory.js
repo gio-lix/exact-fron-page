@@ -18,7 +18,7 @@ export default function ExactProCategory({setExactPro, exactPro,setCompanyCatego
     }
     return (
         <>
-            <div onClick={handlerClick} ref={menuRefOne} className=' flex items-center'>
+            <div onClick={handlerClick} ref={menuRefOne} className='relative flex items-center'>
                 <div className='px-4  h-[64px]  flex justify-center items-center cursor-pointer'>
                     <p className=' font-Open_Sans  text-sm'>Exactpro</p>
                 </div>
@@ -26,7 +26,7 @@ export default function ExactProCategory({setExactPro, exactPro,setCompanyCatego
                     <Image src='/star.svg' width={11} height={24} alt='image' className={`${exactPro && 'transform rotate-90 duration-200 ease-in-out'} `}/>
                 </div>
                 {exactPro && (
-                    <div className='absolute z-50 w-full sm:w-36 h-36 bg-white border border-gray-300 shadow-2xl left-0  sm:left-10 top-12'>
+                    <div className='absolute z-50 w-52 sm:w-36 h-36 bg-white border border-gray-300 shadow-2xl left-0  top-12'>
                         <p className='text-center'>Exactpro</p>
                     </div>
                 )}
