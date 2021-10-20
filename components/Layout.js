@@ -21,5 +21,5 @@ export default function Layout({ children, title, keywords, description}) {
 Layout.defaultProps = {
     title: 'Exactpro Task',
     keywords: 'Exactpro',
-    description: 'Exactpro'
+    description: 'Task For Exactpro'
 }
